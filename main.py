@@ -4,8 +4,7 @@ import metadata
 import set
 import unicode
 
-CURR_SET = "base2"
-url = "https://api.pokemontcg.io/v2/cards?q=set.id:base1"
+CURR_SET = "base1"
 
 if __name__ == "__main__":
     data = set.get_set(CURR_SET)

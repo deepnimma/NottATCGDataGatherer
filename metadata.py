@@ -156,4 +156,8 @@ def _arrange_data(card: dict) -> bool:
     with open(metadata_file_loc, "w") as file:
         json.dump(my_dict, file, indent=4)
 
+    # Get Image Now
+    image_link = card.get("images").get("large")
+    print(image_link)
+
     return False
