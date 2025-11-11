@@ -4,7 +4,7 @@ import metadata
 import set
 import unicode
 
-CURR_SET = "base1"
+CURR_SET = "basep"
 
 if __name__ == "__main__":
     data = set.get_set(CURR_SET)

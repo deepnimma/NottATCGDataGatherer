@@ -93,8 +93,19 @@ def _arrange_data(card: dict) -> bool:
         # Check if card_supertype is energy
         if card_supertype == "energy":
             main_energy = card_title.lower().split(" ")[0]
+            if main_energy == "double":
+                main_energy = card_title.lower().split(" ")[1]
         else:
             main_energy = "trainer"
+
+    if main_energy == "lightning":
+        main_energy = "electric"
+    if main_energy == "potion":
+        main_energy = "trainer"
+    if main_energy == "rainbow":
+        main_energy = "trainer"
+    if main_energy == "full":
+        main_energy = "trainer"
 
     try:
         secondary_energy = card.get("types")[1]
@@ -116,6 +127,13 @@ def _arrange_data(card: dict) -> bool:
     set_data = card.get("set")
     set_name = set_data.get("name").lower()
     card_number = card.get("number")
+
+    if len(card_number) == 1:
+        card_number = "00" + card_number
+    elif len(card_number) == 2:
+        card_number = "0" + card_number
+
+
     master_set_data = {
         "setName": set_name.replace(" ", "-"),
         "cardNumber": card_number,
@@ -123,7 +141,7 @@ def _arrange_data(card: dict) -> bool:
 
     if main_energy == "trainer" or card_supertype == "energy":
         print(
-            f"{card_number} is a {card_supertype if card_supertype == "energy" else "trainer"} Card."
+            f"{card_number} is a {card_supertype if card_supertype == "energy" else "trainer"} card."
         )
         trainer_info_dict["trainer"] = card_title
 
@@ -140,7 +158,7 @@ def _arrange_data(card: dict) -> bool:
         "releaseDay": release_day,
     }
 
-    if "holo" in card.get("rarity").lower():
+    if "holo" in card.get("rarity", "").lower():
         tags.append("holofoil")
     if card_supertype == "energy":
         tags.append("energy")
