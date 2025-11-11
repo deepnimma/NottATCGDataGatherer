@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Water Energy",
+    "mainPokemon": "Water Energy",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Water Energy"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "water",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "102"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Double Colorless Energy",
+    "mainPokemon": "Double Colorless Energy",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Double Colorless Energy"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "double",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "96"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

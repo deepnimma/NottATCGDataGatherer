@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Super Potion",
+    "mainPokemon": "Super Potion",
+    "version": 1,
+    "trainerInfo": {
+        "item": true,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Super Potion"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "trainer",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "90"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

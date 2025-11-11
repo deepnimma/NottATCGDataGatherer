@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Primeape",
+    "mainPokemon": "Primeape",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Fighting",
+    "illustrator": "Kagemaru Himeno",
+    "masterSetData": {
+        "setName": "Jungle",
+        "cardNumber": "43"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 6,
+        "releaseDay": 16
+    },
+    "tags": []
+}

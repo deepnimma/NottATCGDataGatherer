@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Machop",
+    "mainPokemon": "Machop",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Fighting",
+    "illustrator": "Mitsuhiro Arita",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "52"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

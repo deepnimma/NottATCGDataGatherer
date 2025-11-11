@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Bill",
+    "mainPokemon": "Bill",
+    "version": 1,
+    "trainerInfo": {
+        "item": true,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Bill"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "trainer",
+    "illustrator": "Ken Sugimori",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "91"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

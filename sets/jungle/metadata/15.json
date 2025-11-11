@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Vileplume",
+    "mainPokemon": "Vileplume",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Grass",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Jungle",
+        "cardNumber": "15"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 6,
+        "releaseDay": 16
+    },
+    "tags": []
+}

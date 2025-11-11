@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Charizard",
+    "mainPokemon": "Charizard",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Fire",
+    "illustrator": "Mitsuhiro Arita",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "4"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

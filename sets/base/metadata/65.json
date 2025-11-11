@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Staryu",
+    "mainPokemon": "Staryu",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Water",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "65"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

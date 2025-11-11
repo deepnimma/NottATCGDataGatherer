@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Caterpie",
+    "mainPokemon": "Caterpie",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Grass",
+    "illustrator": "Ken Sugimori",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "45"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

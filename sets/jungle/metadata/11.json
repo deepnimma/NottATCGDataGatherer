@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Snorlax",
+    "mainPokemon": "Snorlax",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Colorless",
+    "illustrator": "Ken Sugimori",
+    "masterSetData": {
+        "setName": "Jungle",
+        "cardNumber": "11"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 6,
+        "releaseDay": 16
+    },
+    "tags": []
+}

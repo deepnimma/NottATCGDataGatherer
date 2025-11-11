@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Magmar",
+    "mainPokemon": "Magmar",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Fire",
+    "illustrator": "Ken Sugimori",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "36"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

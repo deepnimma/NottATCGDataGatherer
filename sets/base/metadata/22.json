@@ -1,0 +1,23 @@
+{
+    "cardTitle": "Pidgeotto",
+    "mainPokemon": "Pidgeotto",
+    "version": 1,
+    "trainerInfo": {
+        "item": false,
+        "trainerOwned": false,
+        "soleTrainer": false
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "Colorless",
+    "illustrator": "Ken Sugimori",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "22"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

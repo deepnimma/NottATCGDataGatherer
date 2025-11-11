@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Scoop Up",
+    "mainPokemon": "Scoop Up",
+    "version": 1,
+    "trainerInfo": {
+        "item": true,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Scoop Up"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "trainer",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "78"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}

@@ -1,0 +1,24 @@
+{
+    "cardTitle": "Devolution Spray",
+    "mainPokemon": "Devolution Spray",
+    "version": 1,
+    "trainerInfo": {
+        "item": true,
+        "trainerOwned": false,
+        "soleTrainer": false,
+        "trainer": "Devolution Spray"
+    },
+    "hasReverseHolo": false,
+    "mainEnergy": "trainer",
+    "illustrator": "Keiji Kinebuchi",
+    "masterSetData": {
+        "setName": "Base",
+        "cardNumber": "72"
+    },
+    "release": {
+        "releaseYear": 1999,
+        "releaseMonth": 1,
+        "releaseDay": 9
+    },
+    "tags": []
+}
