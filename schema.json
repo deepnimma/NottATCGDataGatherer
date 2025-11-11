@@ -109,7 +109,10 @@
         "metal",
         "dragon",
         "normal",
-        "trainer"
+        "trainer",
+        "fairy",
+        "colorless",
+        "none"
       ]
     },
     "secondaryEnergy": {
@@ -126,7 +129,10 @@
         "metal",
         "dragon",
         "normal",
-        "trainer"
+        "trainer",
+        "fairy",
+        "colorless",
+        "none"
       ]
     },
     "illustrator": {
@@ -141,16 +147,17 @@
           "description": "The name of the set this card belongs to.",
           "type": "string",
           "enum": [
-            "Base",
-            "Fossil",
-            "Jungle",
-            "Base Set 2",
-            "Team Rocket"
+            "base",
+            "fossil",
+            "jungle",
+            "base-set-2",
+            "team-rocket",
+            "wizards-black-star-promos"
           ]
         },
         "cardNumber": {
           "description": "The number of the card in the set",
-          "type": "number"
+          "type": "string"
         }
       }
     },
@@ -282,16 +289,16 @@
         ],
         "minItems": 1
       }
-    },
-    "required": [
-      "version",
-      "cardTitle",
-      "mainPokemon",
-      "hasReverseHolo",
-      "mainEnergy",
-      "illustrator",
-      "masterSetData",
-      "release"
-    ]
-  }
+    }
+  },
+  "required": [
+    "version",
+    "cardTitle",
+    "mainPokemon",
+    "hasReverseHolo",
+    "mainEnergy",
+    "illustrator",
+    "masterSetData",
+    "release"
+  ]
 }

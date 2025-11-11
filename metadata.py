@@ -1,6 +1,7 @@
 import concurrent.futures
 import json
 import jsonschema
+import requests
 import os
 
 from constants import (
@@ -9,11 +10,13 @@ from constants import (
     TRAINER_SUPERTYPES,
 )
 
+
 def _get_cleaned_set_name(card: dict) -> str:
     set_name = card.get("set").get("name")
     set_name = set_name.replace(" ", "-").lower()
 
     return set_name
+
 
 def _check_dir(set_name: str) -> None:
     if not os.path.exists(f"sets/{set_name}"):
@@ -48,9 +51,11 @@ def parse_list_of_cards(pages: list[dict]) -> bool:
         executor.map(_arrange_data, all_cards)
 
     # # let's ignore the Thread pool while we test stuff
-    # for card in all_cards:
-    #     # print(card.get("number", -1))
-    #     _arrange_data(card)
+    # for i, card in enumerate(all_cards):
+    #     if i > 1:
+    #         continue
+
+#         _arrange_data(card)
 
     return False
 
@@ -69,6 +74,7 @@ def _get_all_cards(pages: list[dict]) -> list[dict]:
 
 
 def _arrange_data(card: dict) -> bool:
+    tags = []
     print(f"Arranging Card: {card.get("set").get("name")}( {card.get("number")} )")
 
     card_supertype = card.get("supertype").lower()
@@ -76,14 +82,13 @@ def _arrange_data(card: dict) -> bool:
         print(f"Skipping {card.get("number")}. Supertype: {card_supertype}")
         return False
 
-    card_title = card.get("name")
+    card_title = card.get("name").lower()
     main_pokemon = card_title  # Will have to do change this manually for each Pokemon?
     version = 1
 
-
     has_reverse_holo = False  # Always False in WOTC Era
     try:
-        main_energy = card.get("types")[0]
+        main_energy = card.get("types")[0].lower()
     except TypeError:
         # Check if card_supertype is energy
         if card_supertype == "energy":
@@ -105,20 +110,21 @@ def _arrange_data(card: dict) -> bool:
         "soleTrainer": False,
     }
 
-
-    illustrator = card.get("artist")
+    illustrator = card.get("artist").lower()
 
     # masterSetData
     set_data = card.get("set")
-    set_name = set_data.get("name")
+    set_name = set_data.get("name").lower()
     card_number = card.get("number")
     master_set_data = {
-        "setName": set_name,
+        "setName": set_name.replace(" ", "-"),
         "cardNumber": card_number,
     }
 
     if main_energy == "trainer" or card_supertype == "energy":
-        print(f"{card_number} is a {card_supertype if card_supertype == "energy" else "trainer"} Card.")
+        print(
+            f"{card_number} is a {card_supertype if card_supertype == "energy" else "trainer"} Card."
+        )
         trainer_info_dict["trainer"] = card_title
 
     # release
@@ -134,6 +140,11 @@ def _arrange_data(card: dict) -> bool:
         "releaseDay": release_day,
     }
 
+    if "holo" in card.get("rarity").lower():
+        tags.append("holofoil")
+    if card_supertype == "energy":
+        tags.append("energy")
+
     my_dict = {
         "cardTitle": card_title,
         "mainPokemon": main_pokemon,
@@ -144,12 +155,22 @@ def _arrange_data(card: dict) -> bool:
         "illustrator": illustrator,
         "masterSetData": master_set_data,
         "release": release,
-        "tags": [],
+        "tags": tags,
     }
 
     if secondary_energy is not None:
         print(f"{card_number} has a secondary energy.")
         my_dict["secondaryEnergy"] = secondary_energy
+
+    # Validate against schema
+    with open("schema.json", "r") as file:
+        schema = json.load(file)
+
+    try:
+        jsonschema.validate(my_dict, schema)
+    except Exception as e:
+        print(f"Could not validate {card_number}. Message: {e}")
+        return False
 
     cleaned_set_name = _get_cleaned_set_name(card)
     metadata_file_loc = f"sets/{cleaned_set_name}/metadata/{card_number}.json"
@@ -158,6 +179,18 @@ def _arrange_data(card: dict) -> bool:
 
     # Get Image Now
     image_link = card.get("images").get("large")
-    print(image_link)
+    image_loc = f"sets/{cleaned_set_name}/images/{card_number}.png"
+
+    if os.path.exists(image_loc):
+        print(f"Skipping {card_number} image. Image already exists.")
+        return True
+
+    print(f"Getting {card_number} image now.")
+
+    # Get Image
+    response = requests.get(image_link)
+
+    with open(image_loc, "wb") as file:
+        file.write(response.content)
 
     return False

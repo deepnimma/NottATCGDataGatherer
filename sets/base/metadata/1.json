@@ -1,6 +1,6 @@
 {
-    "cardTitle": "Alakazam",
-    "mainPokemon": "Alakazam",
+    "cardTitle": "alakazam",
+    "mainPokemon": "alakazam",
     "version": 1,
     "trainerInfo": {
         "item": false,
@@ -8,10 +8,10 @@
         "soleTrainer": false
     },
     "hasReverseHolo": false,
-    "mainEnergy": "Psychic",
-    "illustrator": "Ken Sugimori",
+    "mainEnergy": "psychic",
+    "illustrator": "ken sugimori",
     "masterSetData": {
-        "setName": "Base",
+        "setName": "base",
         "cardNumber": "1"
     },
     "release": {
@@ -19,5 +19,7 @@
         "releaseMonth": 1,
         "releaseDay": 9
     },
-    "tags": []
+    "tags": [
+        "holofoil"
+    ]
 }
