@@ -3,6 +3,7 @@ import json
 import jsonschema
 import requests
 import os
+import re
 
 from constants import (
     IMAGE_DOWNLOADER_WORKERS,
@@ -14,6 +15,7 @@ from constants import (
 def _get_cleaned_set_name(card: dict) -> str:
     set_name = card.get("set").get("name")
     set_name = set_name.replace(" ", "-").lower()
+    set_name = re.sub(r"[^A-Za-z0-9\- ]", "", set_name)
 
     return set_name
 
