@@ -1,18 +1,12 @@
 import json
 
-import metadata
-import set
-import unicode
+from tcgdexsdk import TCGdex
+import requests
 
-CURR_SET = "swsh1"
+sdk = TCGdex("en")
 
 if __name__ == "__main__":
-    data = set.get_set(CURR_SET)
+    response = requests.get("https://api.tcgdex.net/v2/en/cards/base1-1")
 
-    if data is None:
-        exit(1)
-
-    data = unicode.normalize_json_text(data)
-
-    # Parse data
-    metadata.parse_list_of_cards(data)
+    with open("data.json", "w") as file:
+        json.dump(response.json(), file, indent=4)
