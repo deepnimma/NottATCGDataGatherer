@@ -1,0 +1,223 @@
+def validate_image_metadata(metadata: dict) -> None:
+    import jsonschema
+    from jsonschema import ValidationError
+
+    try:
+        jsonschema.validate(metadata, _schema)
+        return None
+    except ValidationError as err:
+        print(f"Error: {err}")
+
+_schema = {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/product.schema.json",
+    "title": "Image Metadata",
+    "description": "Describes an image in the database",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": "Schema Version to be applied.",
+            "type": "number",
+            "enum": [1],
+        },
+        "cardTitle": {
+            "description": "The text at the very top of the card explaining what it is.",
+            "type": "string",
+        },
+        "mainPokemon": {
+            "description": "The main pokemon featured in the illustration.",
+            "type": "string",
+        },
+        "cameoPokemon": {
+            "description": "Which cameo pokemon this card contains, if any",
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 1,
+        },
+        "additionalInfo": {
+            "description": "Additional info to be present in the DB.",
+            "type": "string",
+        },
+        "flavorText": {
+            "description": "Any flavor text to be displayed with the image.",
+            "type": "string",
+        },
+        "infoButton": {
+            "description": "Use this if any information should be displayed as a info button that needs to be hovered over. For information that might be useful to some collectors but not all of them.",
+            "type": "string",
+        },
+        "trainerInfo": {
+            "type": "object",
+            "properties": {
+                "item": {
+                    "description": "Whether this card is just an item. For example, Antique Cover Fossil.",
+                    "type": "boolean",
+                },
+                "trainerOwned": {
+                    "description": "Whether this pokemon is owned by a trainer. For example, Cynthia's Garchomp EX is owned by Cynthia",
+                    "type": "boolean",
+                },
+                "soleTrainer": {
+                    "description": "If the card is just a single trainer. Like Lillie's Determination => Lillie",
+                    "type": "boolean",
+                },
+                "trainer": {
+                    "description": "Who the trainer owner is",
+                    "type": "string",
+                },
+            },
+            "required": ["item"],
+            "if": {
+                "properties": {"trainerOwned": {"const": True}},
+                "anyOf": [
+                    {
+                        "properties": {"trainerOwned": {"const": True}},
+                        "required": ["trainerOwned"],
+                    },
+                    {
+                        "properties": {"soleTrainer": {"const": True}},
+                        "required": ["soleTrainer"],
+                    },
+                ],
+            },
+            "then": {
+                "properties": {"trainer": {"pattern": "\\S"}},
+                "required": ["trainer"],
+            },
+        },
+        "hasReverseHolo": {
+            "description": "Whether this particular card has a reverse holo variant.",
+            "type": "boolean",
+        },
+        "mainEnergy": {
+            "description": "The main/first energy type of this particular pokemon card. This field is required.",
+            "type": "string",
+            "enum": [
+                "grass",
+                "fire",
+                "water",
+                "electric",
+                "psychic",
+                "dark",
+                "fighting",
+                "metal",
+                "dragon",
+                "normal",
+                "trainer",
+                "fairy",
+                "colorless",
+                "none"
+            ],
+        },
+        "secondaryEnergy": {
+            "description": "The secondary energy type of this particular pokemon card. This field is optional and is required on very few cards.",
+            "type": "string",
+            "enum": [
+                "grass",
+                "fire",
+                "water",
+                "electric",
+                "psychic",
+                "dark",
+                "fighting",
+                "metal",
+                "dragon",
+                "normal",
+                "trainer",
+                "fairy",
+                "colorless",
+                "none"
+            ],
+        },
+        "illustrator": {
+            "description": "The illustrator of this particular card.",
+            "type": "string",
+            "pattern": "\\S",
+        },
+        "masterSetData": {
+            "type": "object",
+            "properties": {
+                "setName": {
+                    "description": "The name of the set this card belongs to.",
+                    "type": "string",
+                    "enum": ["base", "fossil", "jungle", "base-set-2", "team-rocket", "wizards-black-star-promos"],
+                },
+                "cardNumber": {
+                    "description": "The number of the card in the set",
+                    "type": "string",
+                },
+            },
+        },
+        "release": {
+            "type": "object",
+            "properties": {
+                "releaseYear": {
+                    "description": "Which year this card released.",
+                    "type": "number",
+                    "minimum": 1999,
+                },
+                "releaseMonth": {
+                    "description": "Which month this card released.",
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 12,
+                },
+                "releaseDay": {
+                    "description": "Which day this card released.",
+                    "type": "number",
+                    "minimum": 1,
+                },
+            },
+            "required": ["releaseYear", "releaseMonth", "releaseDay"],
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "releaseMonth": {"enum": [1, 3, 5, 7, 8, 10, 12]}
+                        }
+                    },
+                    "then": {"properties": {"releaseDay": {"maximum": 31}}},
+                },
+                {
+                    "if": {"properties": {"releaseMonth": {"enum": [4, 6, 9, 11]}}},
+                    "then": {"properties": {"releaseDay": {"maximum": 30}}},
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "releaseMonth": {"const": 2},
+                            "releaseYear": {"not": {"multipleOf": 4}},
+                        }
+                    },
+                    "then": {"properties": {"releaseDay": {"maximum": 28}}},
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "releaseMonth": {"const": 2},
+                            "releaseYear": {"multipleOf": 4},
+                        }
+                    },
+                    "then": {"properties": {"releaseDay": {"maximum": 29}}},
+                },
+            ],
+        },
+        "tags": {
+            "description": "Tags describing the card.",
+            "type": "array",
+            "items": {
+                "type": "string",
+            },
+        },
+    },
+    "required": [
+        "version",
+        "cardTitle",
+        "mainPokemon",
+        "hasReverseHolo",
+        "mainEnergy",
+        "illustrator",
+        "masterSetData",
+        "release",
+    ],
+}

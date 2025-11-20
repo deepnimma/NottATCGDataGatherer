@@ -13,7 +13,7 @@ import card
 sdk = TCGdex("en")
 
 # CHANGE THIS
-set_id = "base2"
+set_id = "base4"
 
 # Get set_data
 set_data = requests.get(f"https://api.tcgdex.net/v2/en/sets/{set_id}")

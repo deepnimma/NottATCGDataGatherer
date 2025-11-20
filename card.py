@@ -1,4 +1,6 @@
 import requests
+import os
+import unicode
 import util
 import json
 
@@ -12,6 +14,8 @@ def get_card_data(card_id: str, release_obj: dict):
         print(f"An error occured while getting card data: {card_data.status_code}. Error: {card_data.text}. Card ID: {card_id}")
 
     card_data = card_data.json()
+
+    card_data = unicode.normalize_json_text(card_data)
 
     with open("temp_card_data.json", "w") as file:
         json.dump(card_data, file, indent = 4)
@@ -62,6 +66,9 @@ def get_card_data(card_id: str, release_obj: dict):
     elif len(card_num) == 2:
         card_num = "0" + card_num
 
+    if set_name == "base-set":
+        set_name = "base"
+
     master_set_data = {
         "setName": set_name,
         "cardNumber": card_num
@@ -97,6 +104,10 @@ def get_card_data(card_id: str, release_obj: dict):
 
     # Get Image
     image_loc = f"sets/{set_name}/images/{card_num}.png"
+
+    if os.path.exists(image_loc):
+        return None
+
     image_link = card_data.get("image") + "/high.png"
     image = requests.get(image_link)
 

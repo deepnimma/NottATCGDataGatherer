@@ -1,23 +1,23 @@
 {
-    "category": "Trainer",
-    "id": "base2-64",
+    "category": "Energy",
+    "id": "base4-130",
     "illustrator": "Keiji Kinebuchi",
-    "image": "https://assets.tcgdex.net/en/base/base2/64",
-    "localId": "64",
-    "name": "Pok\u00e9 Ball",
+    "image": "https://assets.tcgdex.net/en/base/base4/130",
+    "localId": "130",
+    "name": "Water Energy",
     "rarity": "Common",
     "set": {
         "cardCount": {
-            "official": 64,
-            "total": 64
+            "official": 130,
+            "total": 130
         },
-        "id": "base2",
-        "logo": "https://assets.tcgdex.net/en/base/base2/logo",
-        "name": "Jungle",
-        "symbol": "https://assets.tcgdex.net/univ/base/base2/symbol"
+        "id": "base4",
+        "logo": "https://assets.tcgdex.net/en/base/base4/logo",
+        "name": "Base Set 2",
+        "symbol": "https://assets.tcgdex.net/univ/base/base4/symbol"
     },
     "variants": {
-        "firstEdition": true,
+        "firstEdition": false,
         "holo": false,
         "normal": true,
         "reverse": false,
@@ -27,37 +27,42 @@
         {
             "type": "normal",
             "size": "standard"
-        },
-        {
-            "type": "normal",
-            "size": "standard",
-            "stamp": [
-                "1st-edition"
-            ]
         }
     ],
+    "stage": "Basic",
+    "energyType": "Normal",
     "legal": {
-        "standard": false,
-        "expanded": false
+        "standard": true,
+        "expanded": true
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-14T01:47:56.000Z",
             "unit": "EUR",
-            "avg": 0.45,
+            "avg": 0.09,
             "low": 0.02,
-            "trend": 0.37,
-            "avg1": 0.16,
-            "avg7": 0.29,
-            "avg30": 0.44,
+            "trend": 0.07,
+            "avg1": 0.02,
+            "avg7": 0.18,
+            "avg30": 0.11,
             "avg-holo": null,
             "low-holo": null,
-            "trend-holo": 0.3,
-            "avg1-holo": 0.3,
-            "avg7-holo": 0.3,
-            "avg30-holo": 0.3
+            "trend-holo": 0.05,
+            "avg1-holo": 0.05,
+            "avg7-holo": 0.05,
+            "avg30-holo": 0.05
         },
-        "tcgplayer": null
+        "tcgplayer": {
+            "updated": "2025-11-14T20:05:09.000Z",
+            "unit": "USD",
+            "normal": {
+                "lowPrice": 0.04,
+                "midPrice": 0.25,
+                "highPrice": 6.95,
+                "marketPrice": 0.25,
+                "directLowPrice": 0.11
+            }
+        }
     }
 }
