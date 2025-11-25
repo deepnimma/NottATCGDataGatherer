@@ -49,7 +49,7 @@ def get_card_data(card_id: str, release_obj: dict):
     main_energy = renamed_types.get(energy_list[0].lower(), energy_list[0].lower())
     if not _pkmn_flag:
         main_energy = "trainer"
-    illustrator = card_data.get("illustrator").lower()
+    illustrator = card_data.get("illustrator", "unknown").lower()
     _secondary_energy = None
 
     if len(energy_list) > 1:
@@ -118,7 +118,8 @@ def get_card_data(card_id: str, release_obj: dict):
 
 renamed_types = {
     "colorless": "normal",
-    "lightning": "electric"
+    "lightning": "electric",
+    "darkness": "dark",
 }
 
 def _get_image(image_link: str, card_num: int) -> None:

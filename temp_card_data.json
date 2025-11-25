@@ -1,20 +1,20 @@
 {
-    "category": "Energy",
-    "id": "gym2-132",
-    "illustrator": "Keiji Kinebuchi",
-    "image": "https://assets.tcgdex.net/en/gym/gym2/132",
-    "localId": "132",
-    "name": "Water Energy",
-    "rarity": "Common",
+    "category": "Pokemon",
+    "id": "neo4-113",
+    "illustrator": "Ken Sugimori",
+    "image": "https://assets.tcgdex.net/en/neo/neo4/113",
+    "localId": "113",
+    "name": "Shining Tyranitar",
+    "rarity": "Rare",
     "set": {
         "cardCount": {
-            "official": 132,
-            "total": 132
+            "official": 105,
+            "total": 113
         },
-        "id": "gym2",
-        "logo": "https://assets.tcgdex.net/en/gym/gym2/logo",
-        "name": "Gym Challenge",
-        "symbol": "https://assets.tcgdex.net/univ/gym/gym2/symbol"
+        "id": "neo4",
+        "logo": "https://assets.tcgdex.net/en/neo/neo4/logo",
+        "name": "Neo Destiny",
+        "symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol"
     },
     "variants": {
         "firstEdition": true,
@@ -36,46 +36,77 @@
             ]
         }
     ],
+    "dexId": [
+        248
+    ],
+    "hp": 80,
+    "types": [
+        "Darkness"
+    ],
     "stage": "Basic",
-    "energyType": "Normal",
+    "attacks": [
+        {
+            "cost": [
+                "Darkness",
+                "Fighting",
+                "Fighting"
+            ],
+            "damage": 30
+        },
+        {
+            "cost": [
+                "Darkness",
+                "Fire",
+                "Fire",
+                "Fire"
+            ],
+            "damage": 50
+        }
+    ],
+    "resistances": [
+        {
+            "type": "Psychic",
+            "value": "-30"
+        }
+    ],
     "legal": {
-        "standard": true,
-        "expanded": true
+        "standard": false,
+        "expanded": false
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 1.16,
-            "low": 0.02,
-            "trend": 1.03,
-            "avg1": 0.25,
-            "avg7": 0.88,
-            "avg30": 1.47,
+            "avg": 258.33,
+            "low": 110,
+            "trend": 179.06,
+            "avg1": 250,
+            "avg7": 293.16,
+            "avg30": 398.4,
             "avg-holo": null,
             "low-holo": null,
-            "trend-holo": 0,
-            "avg1-holo": null,
-            "avg7-holo": null,
-            "avg30-holo": null
+            "trend-holo": 274.75,
+            "avg1-holo": 125,
+            "avg7-holo": 325.67,
+            "avg30-holo": 197.15
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
-            "1st-edition": {
-                "lowPrice": 1.2,
-                "midPrice": 1.46,
-                "highPrice": 11.97,
-                "marketPrice": 1.91,
+            "1st-edition-holofoil": {
+                "lowPrice": 4249.99,
+                "midPrice": 4249.99,
+                "highPrice": 4249.99,
+                "marketPrice": 700,
                 "directLowPrice": null
             },
-            "unlimited": {
-                "lowPrice": 0.92,
-                "midPrice": 1.25,
-                "highPrice": 2.24,
-                "marketPrice": 1.45,
-                "directLowPrice": 1.09
+            "unlimited-holofoil": {
+                "lowPrice": 491.26,
+                "midPrice": 550,
+                "highPrice": 700,
+                "marketPrice": 669.65,
+                "directLowPrice": null
             }
         }
     }
