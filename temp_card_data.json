@@ -1,23 +1,23 @@
 {
-    "category": "Pokemon",
-    "id": "basep-53",
-    "illustrator": "Atsuko Nishida",
-    "image": "https://assets.tcgdex.net/en/base/basep/53",
-    "localId": "53",
-    "name": "Suicune",
+    "category": "Energy",
+    "id": "gym2-132",
+    "illustrator": "Keiji Kinebuchi",
+    "image": "https://assets.tcgdex.net/en/gym/gym2/132",
+    "localId": "132",
+    "name": "Water Energy",
     "rarity": "Common",
     "set": {
         "cardCount": {
-            "official": 53,
-            "total": 53
+            "official": 132,
+            "total": 132
         },
-        "id": "basep",
-        "logo": "https://assets.tcgdex.net/en/base/basep/logo",
-        "name": "Wizards Black Star Promos",
-        "symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
+        "id": "gym2",
+        "logo": "https://assets.tcgdex.net/en/gym/gym2/logo",
+        "name": "Gym Challenge",
+        "symbol": "https://assets.tcgdex.net/univ/gym/gym2/symbol"
     },
     "variants": {
-        "firstEdition": false,
+        "firstEdition": true,
         "holo": false,
         "normal": true,
         "reverse": false,
@@ -26,52 +26,57 @@
     "variants_detailed": [
         {
             "type": "normal",
+            "size": "standard"
+        },
+        {
+            "type": "normal",
             "size": "standard",
             "stamp": [
-                "pokemon-4-ever"
+                "1st-edition"
             ]
         }
     ],
-    "dexId": [
-        245
-    ],
-    "hp": 70,
-    "types": [
-        "Water"
-    ],
     "stage": "Basic",
-    "abilities": [
-        {
-            "type": "Poke-BODY",
-            "name": "Pure Body",
-            "effect": "To attach a Water Energy card from your hand to Suicune, you must discard an Energy card attached to Suicune. (Attach the Water Energy, and then discard an Energy card from Suicune.)"
-        }
-    ],
-    "attacks": [
-        {
-            "cost": [
-                "Water",
-                "Colorless",
-                "Colorless"
-            ],
-            "name": "Hypno Wave",
-            "effect": "Flip a coin. If heads, this attack does 30 damage plus 20 more damage. If tails, this attack does 30 damage and the Defending Pokemon is now Asleep.",
-            "damage": 30
-        }
-    ],
-    "weaknesses": [
-        {
-            "type": "Lightning",
-            "value": "\u00d72"
-        }
-    ],
+    "energyType": "Normal",
     "legal": {
-        "standard": false,
-        "expanded": false
+        "standard": true,
+        "expanded": true
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
-        "cardmarket": null,
-        "tcgplayer": null
+        "cardmarket": {
+            "updated": "2025-11-20T01:50:57.000Z",
+            "unit": "EUR",
+            "avg": 1.16,
+            "low": 0.02,
+            "trend": 1.03,
+            "avg1": 0.25,
+            "avg7": 0.88,
+            "avg30": 1.47,
+            "avg-holo": null,
+            "low-holo": null,
+            "trend-holo": 0,
+            "avg1-holo": null,
+            "avg7-holo": null,
+            "avg30-holo": null
+        },
+        "tcgplayer": {
+            "updated": "2025-11-19T20:05:32.000Z",
+            "unit": "USD",
+            "1st-edition": {
+                "lowPrice": 1.2,
+                "midPrice": 1.46,
+                "highPrice": 11.97,
+                "marketPrice": 1.91,
+                "directLowPrice": null
+            },
+            "unlimited": {
+                "lowPrice": 0.92,
+                "midPrice": 1.25,
+                "highPrice": 2.24,
+                "marketPrice": 1.45,
+                "directLowPrice": 1.09
+            }
+        }
     }
 }
