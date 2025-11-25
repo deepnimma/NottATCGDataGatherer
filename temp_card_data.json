@@ -1,20 +1,20 @@
 {
-    "category": "Energy",
-    "id": "base4-130",
-    "illustrator": "Keiji Kinebuchi",
-    "image": "https://assets.tcgdex.net/en/base/base4/130",
-    "localId": "130",
-    "name": "Water Energy",
+    "category": "Pokemon",
+    "id": "basep-53",
+    "illustrator": "Atsuko Nishida",
+    "image": "https://assets.tcgdex.net/en/base/basep/53",
+    "localId": "53",
+    "name": "Suicune",
     "rarity": "Common",
     "set": {
         "cardCount": {
-            "official": 130,
-            "total": 130
+            "official": 53,
+            "total": 53
         },
-        "id": "base4",
-        "logo": "https://assets.tcgdex.net/en/base/base4/logo",
-        "name": "Base Set 2",
-        "symbol": "https://assets.tcgdex.net/univ/base/base4/symbol"
+        "id": "basep",
+        "logo": "https://assets.tcgdex.net/en/base/basep/logo",
+        "name": "Wizards Black Star Promos",
+        "symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
     },
     "variants": {
         "firstEdition": false,
@@ -26,43 +26,52 @@
     "variants_detailed": [
         {
             "type": "normal",
-            "size": "standard"
+            "size": "standard",
+            "stamp": [
+                "pokemon-4-ever"
+            ]
         }
     ],
+    "dexId": [
+        245
+    ],
+    "hp": 70,
+    "types": [
+        "Water"
+    ],
     "stage": "Basic",
-    "energyType": "Normal",
+    "abilities": [
+        {
+            "type": "Poke-BODY",
+            "name": "Pure Body",
+            "effect": "To attach a Water Energy card from your hand to Suicune, you must discard an Energy card attached to Suicune. (Attach the Water Energy, and then discard an Energy card from Suicune.)"
+        }
+    ],
+    "attacks": [
+        {
+            "cost": [
+                "Water",
+                "Colorless",
+                "Colorless"
+            ],
+            "name": "Hypno Wave",
+            "effect": "Flip a coin. If heads, this attack does 30 damage plus 20 more damage. If tails, this attack does 30 damage and the Defending Pokemon is now Asleep.",
+            "damage": 30
+        }
+    ],
+    "weaknesses": [
+        {
+            "type": "Lightning",
+            "value": "\u00d72"
+        }
+    ],
     "legal": {
-        "standard": true,
-        "expanded": true
+        "standard": false,
+        "expanded": false
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
-        "cardmarket": {
-            "updated": "2025-11-14T01:47:56.000Z",
-            "unit": "EUR",
-            "avg": 0.09,
-            "low": 0.02,
-            "trend": 0.07,
-            "avg1": 0.02,
-            "avg7": 0.18,
-            "avg30": 0.11,
-            "avg-holo": null,
-            "low-holo": null,
-            "trend-holo": 0.05,
-            "avg1-holo": 0.05,
-            "avg7-holo": 0.05,
-            "avg30-holo": 0.05
-        },
-        "tcgplayer": {
-            "updated": "2025-11-14T20:05:09.000Z",
-            "unit": "USD",
-            "normal": {
-                "lowPrice": 0.04,
-                "midPrice": 0.25,
-                "highPrice": 6.95,
-                "marketPrice": 0.25,
-                "directLowPrice": 0.11
-            }
-        }
+        "cardmarket": null,
+        "tcgplayer": null
     }
 }
