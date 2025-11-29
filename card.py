@@ -30,6 +30,13 @@ def get_card_data(card_id: str, release_obj: dict):
     main_pokemon = util.clean_str(card_title)
     version = 1
 
+    # Clean Main Pokemon
+    # -> If ends with "-ex" remove it
+    if main_pokemon.endswith("-ex"):
+        main_pokemon = main_pokemon[:-3]
+    if main_pokemon.endswith("-"):
+        main_pokemon = main_pokemon[:-1]
+
     # Trainer Info
     _card_category = card_data.get("category").lower()
     if _card_category == "energy":
@@ -61,9 +68,20 @@ def get_card_data(card_id: str, release_obj: dict):
     set_name = util.clean_str(set_name)
     card_num = card_data.get("localId")
 
-    if len(card_num) == 1:
+    # Calc card_num_len
+    card_num_len = -1
+
+    if card_num:
+        last_char = card_num[-1]
+
+        if last_char.isdigit():
+            card_num_len = len(card_num)
+        else:
+            card_num_len = len(card_num) - 1
+
+    if card_num_len == 1:
         card_num = "00" + card_num
-    elif len(card_num) == 2:
+    elif card_num_len == 2:
         card_num = "0" + card_num
 
     if set_name == "base-set":
@@ -108,6 +126,10 @@ def get_card_data(card_id: str, release_obj: dict):
     if os.path.exists(image_loc):
         return None
 
+    if card_data.get("image") is None:
+        print(f"No image for {card_num}")
+        return None
+
     image_link = card_data.get("image") + "/high.png"
     image = requests.get(image_link)
 
@@ -126,6 +148,9 @@ def _get_image(image_link: str, card_num: int) -> None:
     return None
 
 def get_all_stamps(variants_detailed: dict) -> list[str]:
+    if variants_detailed is None:
+        return None
+
     stamps = []
     for variant in variants_detailed:
         for stamp in variant.get("stamp", []):
@@ -141,6 +166,8 @@ def _is_holofoil(variants_detailed: dict) -> bool:
 
 # doing loop just because I like it better (I didn't notice the variant field until after I implemented this)
 def __check_variants_detailed(variants_detailed: dict, card_property: str) -> bool:
+    if variants_detailed is None:
+        return False
     cleaned_card_property = util.clean_str(card_property)
     for variant in variants_detailed:
         if util.clean_str(variant.get("type")) == cleaned_card_property:

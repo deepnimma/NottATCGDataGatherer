@@ -1,26 +1,26 @@
 {
     "category": "Pokemon",
-    "id": "neo4-113",
-    "illustrator": "Ken Sugimori",
-    "image": "https://assets.tcgdex.net/en/neo/neo4/113",
-    "localId": "113",
-    "name": "Shining Tyranitar",
+    "id": "pop1-17",
+    "illustrator": "Hisao Nakamura",
+    "image": "https://assets.tcgdex.net/en/pop/pop1/17",
+    "localId": "17",
+    "name": "Tyranitar ex",
     "rarity": "Rare",
     "set": {
         "cardCount": {
-            "official": 105,
-            "total": 113
+            "official": 17,
+            "total": 17
         },
-        "id": "neo4",
-        "logo": "https://assets.tcgdex.net/en/neo/neo4/logo",
-        "name": "Neo Destiny",
-        "symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol"
+        "id": "pop1",
+        "logo": "https://assets.tcgdex.net/en/pop/pop1/logo",
+        "name": "POP Series 1",
+        "symbol": "https://assets.tcgdex.net/univ/pop/pop1/symbol"
     },
     "variants": {
-        "firstEdition": true,
-        "holo": false,
+        "firstEdition": false,
+        "holo": true,
         "normal": true,
-        "reverse": false,
+        "reverse": true,
         "wPromo": false
     },
     "variants_detailed": [
@@ -29,38 +29,50 @@
             "size": "standard"
         },
         {
-            "type": "normal",
-            "size": "standard",
-            "stamp": [
-                "1st-edition"
-            ]
+            "type": "reverse",
+            "size": "standard"
+        },
+        {
+            "type": "holo",
+            "size": "standard"
         }
     ],
     "dexId": [
         248
     ],
-    "hp": 80,
+    "hp": 150,
     "types": [
         "Darkness"
     ],
-    "stage": "Basic",
+    "evolveFrom": "Pupitar",
+    "stage": "Stage2",
+    "suffix": "EX",
     "attacks": [
         {
             "cost": [
-                "Darkness",
-                "Fighting",
-                "Fighting"
+                "Colorless"
             ],
-            "damage": 30
+            "name": "Scratch",
+            "damage": 20
         },
         {
             "cost": [
-                "Darkness",
-                "Fire",
-                "Fire",
-                "Fire"
+                "Fighting",
+                "Fighting",
+                "Colorless",
+                "Colorless"
             ],
-            "damage": 50
+            "name": "Critical Crush",
+            "effect": "Discard 2 basic Energy cards attached to Tyranitar ex or this attack does nothing.",
+            "damage": 80
+        }
+    ],
+    "weaknesses": [
+        {
+            "type": "Grass"
+        },
+        {
+            "type": "Fighting"
         }
     ],
     "resistances": [
@@ -69,43 +81,37 @@
             "value": "-30"
         }
     ],
+    "retreat": 4,
     "legal": {
         "standard": false,
         "expanded": false
     },
-    "updated": "2025-11-14T00:13:03+01:00",
+    "updated": "2025-08-16T20:39:55Z",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 258.33,
-            "low": 110,
-            "trend": 179.06,
-            "avg1": 250,
-            "avg7": 293.16,
-            "avg30": 398.4,
+            "avg": 9.03,
+            "low": 1,
+            "trend": 12.66,
+            "avg1": 12.99,
+            "avg7": 11.29,
+            "avg30": 16.3,
             "avg-holo": null,
             "low-holo": null,
-            "trend-holo": 274.75,
-            "avg1-holo": 125,
-            "avg7-holo": 325.67,
-            "avg30-holo": 197.15
+            "trend-holo": 5.21,
+            "avg1-holo": 3,
+            "avg7-holo": 8.29,
+            "avg30-holo": 7.95
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
-            "1st-edition-holofoil": {
-                "lowPrice": 4249.99,
-                "midPrice": 4249.99,
-                "highPrice": 4249.99,
-                "marketPrice": 700,
-                "directLowPrice": null
-            },
-            "unlimited-holofoil": {
-                "lowPrice": 491.26,
-                "midPrice": 550,
-                "highPrice": 700,
-                "marketPrice": 669.65,
+            "holofoil": {
+                "lowPrice": 32,
+                "midPrice": 89.99,
+                "highPrice": 178.99,
+                "marketPrice": 96.57,
                 "directLowPrice": null
             }
         }
