@@ -1,80 +1,67 @@
 {
-    "category": "Pokemon",
-    "id": "np-40",
-    "illustrator": "Masakazu Fukuda",
-    "image": "https://assets.tcgdex.net/en/pop/np/40",
-    "localId": "40",
-    "name": "Mew",
-    "rarity": "Common",
+    "category": "Trainer",
+    "id": "ex7-111",
+    "illustrator": "Ken Sugimori",
+    "image": "https://assets.tcgdex.net/en/ex/ex7/111",
+    "localId": "111",
+    "name": "Here Comes Team Rocket!",
+    "rarity": "Rare",
     "set": {
         "cardCount": {
-            "official": 40,
-            "total": 40
+            "official": 109,
+            "total": 111
         },
-        "id": "np",
-        "logo": "https://assets.tcgdex.net/en/pop/np/logo",
-        "name": "Nintendo Black Star Promos",
-        "symbol": "https://assets.tcgdex.net/univ/pop/np/symbol"
+        "id": "ex7",
+        "logo": "https://assets.tcgdex.net/en/ex/ex7/logo",
+        "name": "Team Rocket Returns",
+        "symbol": "https://assets.tcgdex.net/univ/ex/ex7/symbol"
     },
     "variants": {
         "firstEdition": false,
         "holo": true,
-        "normal": true,
-        "reverse": true,
+        "normal": false,
+        "reverse": false,
         "wPromo": false
     },
     "variants_detailed": [
-        {
-            "type": "normal",
-            "size": "standard"
-        },
-        {
-            "type": "reverse",
-            "size": "standard"
-        },
         {
             "type": "holo",
             "size": "standard"
         }
     ],
-    "dexId": [
-        151
-    ],
-    "hp": 50,
-    "types": [
-        "Psychic"
-    ],
-    "stage": "Basic",
-    "attacks": [
-        {
-            "cost": [
-                "Colorless"
-            ],
-            "name": "Psywave",
-            "effect": "Does 10 damage times the amount of Energy attached to the Defending Pokemon.",
-            "damage": 10
-        },
-        {
-            "cost": [
-                "Psychic"
-            ],
-            "name": "Devolution Beam",
-            "effect": "Flip a coin. If heads, choose 1 of either player's Evolved Pokemon, remove the highest Stage Evolution card from that Pokemon, and put it into that player's hand."
-        }
-    ],
-    "weaknesses": [
-        {
-            "type": "Psychic",
-            "value": "\u00d72"
-        }
-    ],
+    "trainerType": "Supporter",
     "legal": {
         "standard": false,
         "expanded": false
     },
-    "updated": "2021-06-02T12:13:12+02:00",
+    "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
-        "cardmarket": null,
-        "tcgplayer": null
+        "cardmarket": {
+            "updated": "2025-11-20T01:50:57.000Z",
+            "unit": "EUR",
+            "avg": 73.3,
+            "low": 65,
+            "trend": 161.81,
+            "avg1": 49.99,
+            "avg7": 130.32,
+            "avg30": 140.84,
+            "avg-holo": null,
+            "low-holo": null,
+            "trend-holo": 93.61,
+            "avg1-holo": 99.99,
+            "avg7-holo": 89.63,
+            "avg30-holo": 68.44
+        },
+        "tcgplayer": {
+            "updated": "2025-11-19T20:05:32.000Z",
+            "unit": "USD",
+            "holofoil": {
+                "lowPrice": 180,
+                "midPrice": 349.99,
+                "highPrice": 375,
+                "marketPrice": 215,
+                "directLowPrice": null
+            }
+        }
     }
 }

@@ -13,14 +13,14 @@ import card
 sdk = TCGdex("en")
 
 # CHANGE THIS
-sets = ["np"]
+sets: list[str] = ["ex7"]
 
 for set_id in sets:
     # Get set_data
     set_data = requests.get(f"https://api.tcgdex.net/v2/en/sets/{set_id}")
 
     if set_data.status_code != 200:
-        print(f"Error: {set_id} not found. Error Message: {set_id.text}")
+        print(f"Error: {set_id} not found. Error Message: {set_data.text}")
         sys.exit(1)
 
     set_data = set_data.json()
