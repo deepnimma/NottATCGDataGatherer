@@ -1,26 +1,26 @@
 {
     "category": "Pokemon",
-    "id": "pop1-17",
-    "illustrator": "Hisao Nakamura",
-    "image": "https://assets.tcgdex.net/en/pop/pop1/17",
-    "localId": "17",
-    "name": "Tyranitar ex",
-    "rarity": "Rare",
+    "id": "pop6-15",
+    "illustrator": "Atsuko Nishida",
+    "image": "https://assets.tcgdex.net/en/pop/pop6/15",
+    "localId": "15",
+    "name": "Piplup",
+    "rarity": "Common",
     "set": {
         "cardCount": {
             "official": 17,
             "total": 17
         },
-        "id": "pop1",
-        "logo": "https://assets.tcgdex.net/en/pop/pop1/logo",
-        "name": "POP Series 1",
-        "symbol": "https://assets.tcgdex.net/univ/pop/pop1/symbol"
+        "id": "pop6",
+        "logo": "https://assets.tcgdex.net/en/pop/pop6/logo",
+        "name": "POP Series 6",
+        "symbol": "https://assets.tcgdex.net/univ/pop/pop6/symbol"
     },
     "variants": {
         "firstEdition": false,
         "holo": true,
         "normal": true,
-        "reverse": true,
+        "reverse": false,
         "wPromo": false
     },
     "variants_detailed": [
@@ -29,59 +29,41 @@
             "size": "standard"
         },
         {
-            "type": "reverse",
-            "size": "standard"
-        },
-        {
             "type": "holo",
             "size": "standard"
         }
     ],
     "dexId": [
-        248
+        393
     ],
-    "hp": 150,
+    "hp": 60,
     "types": [
-        "Darkness"
+        "Water"
     ],
-    "evolveFrom": "Pupitar",
-    "stage": "Stage2",
-    "suffix": "EX",
+    "description": "Because it is very proud, it hates accepting food from people. Its thick down guards it from cold.",
+    "stage": "Basic",
     "attacks": [
         {
-            "cost": [
-                "Colorless"
-            ],
-            "name": "Scratch",
-            "damage": 20
+            "name": "Peck",
+            "damage": 10
         },
         {
             "cost": [
-                "Fighting",
-                "Fighting",
-                "Colorless",
+                "Water",
                 "Colorless"
             ],
-            "name": "Critical Crush",
-            "effect": "Discard 2 basic Energy cards attached to Tyranitar ex or this attack does nothing.",
-            "damage": 80
+            "name": "Water Splash",
+            "effect": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+            "damage": "20+"
         }
     ],
     "weaknesses": [
         {
-            "type": "Grass"
-        },
-        {
-            "type": "Fighting"
+            "type": "Lightning",
+            "value": "+10"
         }
     ],
-    "resistances": [
-        {
-            "type": "Psychic",
-            "value": "-30"
-        }
-    ],
-    "retreat": 4,
+    "retreat": 1,
     "legal": {
         "standard": false,
         "expanded": false
@@ -91,27 +73,34 @@
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 9.03,
-            "low": 1,
-            "trend": 12.66,
-            "avg1": 12.99,
-            "avg7": 11.29,
-            "avg30": 16.3,
+            "avg": 1.82,
+            "low": 0.25,
+            "trend": 1.61,
+            "avg1": 2.98,
+            "avg7": 1.95,
+            "avg30": 1.85,
             "avg-holo": null,
             "low-holo": null,
-            "trend-holo": 5.21,
-            "avg1-holo": 3,
-            "avg7-holo": 8.29,
-            "avg30-holo": 7.95
+            "trend-holo": 1.79,
+            "avg1-holo": 2.99,
+            "avg7-holo": 1.23,
+            "avg30-holo": 1.14
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
+            "normal": {
+                "lowPrice": 5,
+                "midPrice": 5.17,
+                "highPrice": 5.34,
+                "marketPrice": 8.55,
+                "directLowPrice": null
+            },
             "holofoil": {
-                "lowPrice": 32,
-                "midPrice": 89.99,
-                "highPrice": 178.99,
-                "marketPrice": 96.57,
+                "lowPrice": 2.19,
+                "midPrice": 3.77,
+                "highPrice": 6.18,
+                "marketPrice": 6.77,
                 "directLowPrice": null
             }
         }
