@@ -4,6 +4,7 @@ import unicode
 import util
 import json
 
+
 def get_card_data(card_id: str, release_obj: dict):
     print(card_id)
 
@@ -11,14 +12,16 @@ def get_card_data(card_id: str, release_obj: dict):
     card_data = requests.get(f"https://api.tcgdex.net/v2/en/cards/{card_id}")
 
     if card_data.status_code != 200:
-        print(f"An error occured while getting card data: {card_data.status_code}. Error: {card_data.text}. Card ID: {card_id}")
+        print(
+            f"An error occured while getting card data: {card_data.status_code}. Error: {card_data.text}. Card ID: {card_id}"
+        )
 
     card_data = card_data.json()
 
     card_data = unicode.normalize_json_text(card_data)
 
     with open("temp_card_data.json", "w") as file:
-        json.dump(card_data, file, indent = 4)
+        json.dump(card_data, file, indent=4)
 
     # Create tags list early
     tags = []
@@ -52,11 +55,7 @@ def get_card_data(card_id: str, release_obj: dict):
     if _card_category == "energy":
         tags.append("energy")
     _pkmn_flag = _card_category == "pokemon"
-    trainer_info = {
-        "item": not _pkmn_flag,
-        "trainerOwned": False,
-        "soleTrainer": False
-    }
+    trainer_info = {"item": not _pkmn_flag, "trainerOwned": False, "soleTrainer": False}
 
     if not _pkmn_flag:
         trainer_info["trainer"] = card_title
@@ -97,10 +96,7 @@ def get_card_data(card_id: str, release_obj: dict):
     if set_name == "base-set":
         set_name = "base"
 
-    master_set_data = {
-        "setName": set_name,
-        "cardNumber": card_num
-    }
+    master_set_data = {"setName": set_name, "cardNumber": card_num}
 
     # release data
     release = release_obj
@@ -128,7 +124,7 @@ def get_card_data(card_id: str, release_obj: dict):
         card_obj["secondaryEnergy"] = _secondary_energy
 
     with open(f"sets/{set_name}/metadata/{card_num}.json", "w") as file:
-        json.dump(card_obj, file, indent = 2)
+        json.dump(card_obj, file, indent=2)
 
     # Get Image
     image_loc = f"sets/{set_name}/images/{card_num}.png"
@@ -148,14 +144,17 @@ def get_card_data(card_id: str, release_obj: dict):
 
     return None
 
+
 renamed_types = {
     "colorless": "normal",
     "lightning": "electric",
     "darkness": "dark",
 }
 
+
 def _get_image(image_link: str, card_num: int) -> None:
     return None
+
 
 def get_all_stamps(variants_detailed: dict) -> list[str]:
     if variants_detailed is None:
@@ -168,11 +167,14 @@ def get_all_stamps(variants_detailed: dict) -> list[str]:
 
     return stamps
 
+
 def _has_reverse_holo(variants_detailed: dict) -> bool:
     return __check_variants_detailed(variants_detailed, "reverse")
 
+
 def _is_holofoil(variants_detailed: dict) -> bool:
     return __check_variants_detailed(variants_detailed, "holo")
+
 
 # doing loop just because I like it better (I didn't notice the variant field until after I implemented this)
 def __check_variants_detailed(variants_detailed: dict, card_property: str) -> bool:

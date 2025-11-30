@@ -22,7 +22,7 @@ for name in metadata_files:
         rename_flag = False
 
     if rename_flag:
-        file_data["mainPokemon"] = file_data["mainPokemon"][len(team):]
+        file_data["mainPokemon"] = file_data["mainPokemon"][len(team) :]
 
     with open(f"metadata/{name}", "w") as file:
         json.dump(file_data, file, indent=2)

@@ -17,9 +17,11 @@ for file in metadata_files:
         team = None
 
     if team is not None:
-        file_data["mainPokemon"] = file_data["mainPokemon"][len(team) + 2:]
+        file_data["mainPokemon"] = file_data["mainPokemon"][len(team) + 2 :]
         file_data["trainerInfo"]["trainerOwned"] = True
-        file_data["trainerInfo"]["trainer"] = "team aqua" if team == "team-aqua" else "team magma"
+        file_data["trainerInfo"]["trainer"] = (
+            "team aqua" if team == "team-aqua" else "team magma"
+        )
 
     with open(f"metadata/{file}", "w") as f:
         json.dump(file_data, f, indent=2)

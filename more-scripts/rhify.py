@@ -11,7 +11,9 @@ for name in metadata_files:
     file_data["isReverseHolo"] = True
 
     if not file_data["masterSetData"]["cardNumber"].endswith("-RH"):
-        file_data["masterSetData"]["cardNumber"] = file_data["masterSetData"]["cardNumber"] + "-RH"
+        file_data["masterSetData"]["cardNumber"] = (
+            file_data["masterSetData"]["cardNumber"] + "-RH"
+        )
         try:
             file_data["tags"].remove("holofoil")
         except Exception as e:

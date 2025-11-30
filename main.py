@@ -49,6 +49,10 @@ for set_id in sets:
     util.create_folders(cleaned_set_name)
 
     params = [(ind_card.get("id"), release_obj) for ind_card in all_cards]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=constants.IMAGE_DOWNLOADER_WORKERS) as executor:
-        results_iterator = executor.map(lambda x: card.get_card_data(x[0], x[1]), params)
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=constants.IMAGE_DOWNLOADER_WORKERS
+    ) as executor:
+        results_iterator = executor.map(
+            lambda x: card.get_card_data(x[0], x[1]), params
+        )
         all_results = list(results_iterator)

@@ -57,12 +57,12 @@ def add_sash_poppins(input_path, output_path, text="SASH TEXT"):
     width, height = base_image.size
 
     # 2. Geometry (Diagonal & Angle)
-    diagonal = int(math.sqrt(width ** 2 + height ** 2))
+    diagonal = int(math.sqrt(width**2 + height**2))
     angle = math.degrees(math.atan2(height, width))
 
     # 3. Create Overlay Canvas (Square)
     overlay_size = (diagonal, diagonal)
-    overlay = Image.new('RGBA', overlay_size, (0, 0, 0, 0))
+    overlay = Image.new("RGBA", overlay_size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
     # 4. Sash Configuration
@@ -123,7 +123,10 @@ if __name__ == "__main__":
 
     for i in range(len(file_paths)):
         threads.append(
-            threading.Thread(target=add_sash_poppins, args=(file_paths[i], output_paths[i], "REVERSE FOIL"))
+            threading.Thread(
+                target=add_sash_poppins,
+                args=(file_paths[i], output_paths[i], "REVERSE FOIL"),
+            )
         )
 
     for t in threads:

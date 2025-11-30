@@ -8,6 +8,7 @@ def validate_image_metadata(metadata: dict) -> None:
     except ValidationError as err:
         print(f"Error: {err}")
 
+
 _schema = {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://example.com/product.schema.json",
@@ -106,7 +107,7 @@ _schema = {
                 "trainer",
                 "fairy",
                 "colorless",
-                "none"
+                "none",
             ],
         },
         "secondaryEnergy": {
@@ -126,7 +127,7 @@ _schema = {
                 "trainer",
                 "fairy",
                 "colorless",
-                "none"
+                "none",
             ],
         },
         "illustrator": {
@@ -140,7 +141,14 @@ _schema = {
                 "setName": {
                     "description": "The name of the set this card belongs to.",
                     "type": "string",
-                    "enum": ["base", "fossil", "jungle", "base-set-2", "team-rocket", "wizards-black-star-promos"],
+                    "enum": [
+                        "base",
+                        "fossil",
+                        "jungle",
+                        "base-set-2",
+                        "team-rocket",
+                        "wizards-black-star-promos",
+                    ],
                 },
                 "cardNumber": {
                     "description": "The number of the card in the set",

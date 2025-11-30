@@ -15,6 +15,7 @@ for file in metadata_files:
     with open(f"./metadata/{file}", "r") as file:
         data.append(json.load(file))
 
+
 def handle_lt_surge(data: dict) -> dict:
     lt_owner = "lt-surge"
     lt_trainer_name = "lt. surge"
@@ -27,6 +28,7 @@ def handle_lt_surge(data: dict) -> dict:
     data["cameoPokemon"] = lt_cameo_pokemon
 
     return data
+
 
 new_data: list[dict] = []
 for d in data:
