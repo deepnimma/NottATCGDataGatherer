@@ -1,2 +1,6 @@
 sets/
 .env
+
+./more-scripts/sash/input
+./more-scripts/sash/inputs
+./more-scripts/sash/images
