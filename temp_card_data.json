@@ -1,65 +1,72 @@
 {
-    "category": "Trainer",
-    "id": "ex7-111",
-    "illustrator": "Ken Sugimori",
-    "image": "https://assets.tcgdex.net/en/ex/ex7/111",
-    "localId": "111",
-    "name": "Here Comes Team Rocket!",
+    "category": "Energy",
+    "id": "ex16-108",
+    "image": "https://assets.tcgdex.net/en/ex/ex16/108",
+    "localId": "108",
+    "name": "Fighting Energy",
     "rarity": "Rare",
     "set": {
         "cardCount": {
-            "official": 109,
-            "total": 111
+            "official": 108,
+            "total": 108
         },
-        "id": "ex7",
-        "logo": "https://assets.tcgdex.net/en/ex/ex7/logo",
-        "name": "Team Rocket Returns",
-        "symbol": "https://assets.tcgdex.net/univ/ex/ex7/symbol"
+        "id": "ex16",
+        "logo": "https://assets.tcgdex.net/en/ex/ex16/logo",
+        "name": "Power Keepers",
+        "symbol": "https://assets.tcgdex.net/univ/ex/ex16/symbol"
     },
     "variants": {
         "firstEdition": false,
-        "holo": true,
-        "normal": false,
+        "holo": false,
+        "normal": true,
         "reverse": false,
         "wPromo": false
     },
     "variants_detailed": [
         {
-            "type": "holo",
+            "type": "normal",
             "size": "standard"
+        },
+        {
+            "type": "normal",
+            "size": "standard",
+            "stamp": [
+                "set-logo"
+            ]
         }
     ],
-    "trainerType": "Supporter",
+    "stage": "Basic",
+    "energyType": "Normal",
     "legal": {
-        "standard": false,
-        "expanded": false
+        "standard": true,
+        "expanded": true
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 73.3,
-            "low": 65,
-            "trend": 161.81,
-            "avg1": 49.99,
-            "avg7": 130.32,
-            "avg30": 140.84,
-            "avg-holo": null,
-            "low-holo": null,
-            "trend-holo": 93.61,
-            "avg1-holo": 99.99,
-            "avg7-holo": 89.63,
-            "avg30-holo": 68.44
+            "avg": 1.54,
+            "low": 0.38,
+            "trend": 1.98,
+            "avg1": 1.75,
+            "avg7": 1.73,
+            "avg30": 1.58,
+            "avg-holo": 2.69,
+            "low-holo": 0.49,
+            "trend-holo": 2.28,
+            "avg1-holo": 2.5,
+            "avg7-holo": 2.53,
+            "avg30-holo": 2.01
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
             "holofoil": {
-                "lowPrice": 180,
-                "midPrice": 349.99,
-                "highPrice": 375,
-                "marketPrice": 215,
+                "lowPrice": 3,
+                "midPrice": 4.18,
+                "highPrice": 19.95,
+                "marketPrice": 4.17,
                 "directLowPrice": null
             }
         }

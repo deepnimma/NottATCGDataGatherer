@@ -13,7 +13,7 @@ import card
 sdk = TCGdex("en")
 
 # CHANGE THIS
-sets: list[str] = ["ex7"]
+sets: list[str] = ["ex13", "ex14", "ex15", "ex16"]
 
 for set_id in sets:
     # Get set_data

@@ -34,6 +34,16 @@ def get_card_data(card_id: str, release_obj: dict):
     # -> If ends with "-ex" remove it
     if main_pokemon.endswith("-ex"):
         main_pokemon = main_pokemon[:-3]
+        tags.append("ex")
+    if main_pokemon.endswith("-v"):
+        main_pokemon = main_pokemon[:-2]
+        tags.append("v")
+    if main_pokemon.endswith("-vmax"):
+        main_pokemon = main_pokemon[:-5]
+        tags.append("vmax")
+    if main_pokemon.endswith("-vstar"):
+        main_pokemon = main_pokemon[:-6]
+        tags.append("vstar")
     if main_pokemon.endswith("-"):
         main_pokemon = main_pokemon[:-1]
 
