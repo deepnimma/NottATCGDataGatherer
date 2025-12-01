@@ -19,7 +19,7 @@ for name in metadata_files:
         except Exception as e:
             pass
 
-        file_data.append("reverse-holofoil")
+        file_data["tags"].append("reverse-holofoil")
 
         # Edit the image file name
         image_name = f"images/{name[:-4]}png"

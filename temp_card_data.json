@@ -1,72 +1,95 @@
 {
-    "category": "Energy",
-    "id": "ex16-108",
-    "image": "https://assets.tcgdex.net/en/ex/ex16/108",
+    "category": "Pokemon",
+    "id": "ex8-108",
+    "illustrator": "Ryo Ueda",
+    "image": "https://assets.tcgdex.net/en/ex/ex8/108",
     "localId": "108",
-    "name": "Fighting Energy",
+    "name": "Rocket's Raikou ex",
     "rarity": "Rare",
     "set": {
         "cardCount": {
-            "official": 108,
+            "official": 107,
             "total": 108
         },
-        "id": "ex16",
-        "logo": "https://assets.tcgdex.net/en/ex/ex16/logo",
-        "name": "Power Keepers",
-        "symbol": "https://assets.tcgdex.net/univ/ex/ex16/symbol"
+        "id": "ex8",
+        "logo": "https://assets.tcgdex.net/en/ex/ex8/logo",
+        "name": "Deoxys",
+        "symbol": "https://assets.tcgdex.net/univ/ex/ex8/symbol"
     },
     "variants": {
         "firstEdition": false,
-        "holo": false,
-        "normal": true,
+        "holo": true,
+        "normal": false,
         "reverse": false,
         "wPromo": false
     },
     "variants_detailed": [
         {
-            "type": "normal",
+            "type": "holo",
             "size": "standard"
-        },
-        {
-            "type": "normal",
-            "size": "standard",
-            "stamp": [
-                "set-logo"
-            ]
         }
     ],
+    "dexId": [
+        243
+    ],
+    "hp": 100,
+    "types": [
+        "Darkness"
+    ],
     "stage": "Basic",
-    "energyType": "Normal",
+    "abilities": [
+        {
+            "type": "Poke-POWER"
+        }
+    ],
+    "attacks": [
+        {
+            "cost": [
+                "Lightning",
+                "Colorless",
+                "Colorless"
+            ],
+            "name": "Thunderous Blow",
+            "effect": "Does 40 damage plus 10 more damage for each Lightning Energy attached to Rocket's Raikou ex.",
+            "damage": "40+"
+        }
+    ],
+    "weaknesses": [
+        {
+            "type": "Fighting",
+            "value": "\u00d72"
+        }
+    ],
     "legal": {
-        "standard": true,
-        "expanded": true
+        "standard": false,
+        "expanded": false
     },
     "updated": "2025-11-14T00:13:03+01:00",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 1.54,
-            "low": 0.38,
-            "trend": 1.98,
-            "avg1": 1.75,
-            "avg7": 1.73,
-            "avg30": 1.58,
-            "avg-holo": 2.69,
-            "low-holo": 0.49,
-            "trend-holo": 2.28,
-            "avg1-holo": 2.5,
-            "avg7-holo": 2.53,
-            "avg30-holo": 2.01
+            "avg": 72.58,
+            "low": 25,
+            "trend": 124.22,
+            "avg1": 34.99,
+            "avg7": 90.21,
+            "avg30": 142.06,
+            "avg-holo": null,
+            "low-holo": 300,
+            "trend-holo": 140.77,
+            "avg1-holo": 40,
+            "avg7-holo": 88.35,
+            "avg30-holo": 49.8
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
             "holofoil": {
-                "lowPrice": 3,
-                "midPrice": 4.18,
-                "highPrice": 19.95,
-                "marketPrice": 4.17,
+                "lowPrice": 244.44,
+                "midPrice": 272.5,
+                "highPrice": 299.99,
+                "marketPrice": 225.56,
                 "directLowPrice": null
             }
         }
