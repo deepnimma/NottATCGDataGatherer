@@ -13,7 +13,8 @@ import card
 sdk = TCGdex("en")
 
 # CHANGE THIS
-sets: list[str] = ["ex8"]
+sets: list[str] = [f"xy{n}" for n in range(11, 13)]
+print(sets)
 
 for set_id in sets:
     # Get set_data

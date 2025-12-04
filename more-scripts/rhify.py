@@ -4,6 +4,9 @@ import json
 metadata_files = os.listdir("metadata")
 
 for name in metadata_files:
+    if name.endswith("-RH.json"):
+        continue
+
     with open(f"metadata/{name}", "r") as file:
         file_data = json.load(file)
 

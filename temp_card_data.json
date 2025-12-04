@@ -1,96 +1,75 @@
 {
-    "category": "Pokemon",
-    "id": "ex8-108",
-    "illustrator": "Ryo Ueda",
-    "image": "https://assets.tcgdex.net/en/ex/ex8/108",
-    "localId": "108",
-    "name": "Rocket's Raikou ex",
-    "rarity": "Rare",
+    "category": "Trainer",
+    "id": "xy12-113",
+    "illustrator": "Ken Sugimori",
+    "image": "https://assets.tcgdex.net/en/xy/xy12/113",
+    "localId": "113",
+    "name": "Here Comes Team Rocket!",
+    "rarity": "Secret Rare",
     "set": {
         "cardCount": {
-            "official": 107,
-            "total": 108
+            "official": 108,
+            "total": 113
         },
-        "id": "ex8",
-        "logo": "https://assets.tcgdex.net/en/ex/ex8/logo",
-        "name": "Deoxys",
-        "symbol": "https://assets.tcgdex.net/univ/ex/ex8/symbol"
+        "id": "xy12",
+        "logo": "https://assets.tcgdex.net/en/xy/xy12/logo",
+        "name": "Evolutions",
+        "symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol"
     },
     "variants": {
         "firstEdition": false,
         "holo": true,
-        "normal": false,
-        "reverse": false,
+        "normal": true,
+        "reverse": true,
         "wPromo": false
     },
     "variants_detailed": [
+        {
+            "type": "normal",
+            "size": "standard"
+        },
+        {
+            "type": "reverse",
+            "size": "standard"
+        },
         {
             "type": "holo",
             "size": "standard"
         }
     ],
-    "dexId": [
-        243
-    ],
-    "hp": 100,
-    "types": [
-        "Darkness"
-    ],
-    "stage": "Basic",
-    "abilities": [
-        {
-            "type": "Poke-POWER"
-        }
-    ],
-    "attacks": [
-        {
-            "cost": [
-                "Lightning",
-                "Colorless",
-                "Colorless"
-            ],
-            "name": "Thunderous Blow",
-            "effect": "Does 40 damage plus 10 more damage for each Lightning Energy attached to Rocket's Raikou ex.",
-            "damage": "40+"
-        }
-    ],
-    "weaknesses": [
-        {
-            "type": "Fighting",
-            "value": "\u00d72"
-        }
-    ],
+    "effect": "Each player turns all of his or her Prize cards face up. (Those Prize cards remain face up for the rest of the game.)",
+    "trainerType": "Supporter",
     "legal": {
         "standard": false,
-        "expanded": false
+        "expanded": true
     },
-    "updated": "2025-11-14T00:13:03+01:00",
+    "updated": "2025-08-16T20:39:55Z",
     "pricing": {
         "cardmarket": {
             "updated": "2025-11-20T01:50:57.000Z",
             "unit": "EUR",
-            "avg": 72.58,
-            "low": 25,
-            "trend": 124.22,
-            "avg1": 34.99,
-            "avg7": 90.21,
-            "avg30": 142.06,
+            "avg": 1.47,
+            "low": 0.2,
+            "trend": 1.52,
+            "avg1": 1.37,
+            "avg7": 1.38,
+            "avg30": 1.44,
             "avg-holo": null,
-            "low-holo": 300,
-            "trend-holo": 140.77,
-            "avg1-holo": 40,
-            "avg7-holo": 88.35,
-            "avg30-holo": 49.8
+            "low-holo": null,
+            "trend-holo": 1.5,
+            "avg1-holo": 5,
+            "avg7-holo": 1.42,
+            "avg30-holo": 1.46
         },
         "tcgplayer": {
             "updated": "2025-11-19T20:05:32.000Z",
             "unit": "USD",
-            "holofoil": {
-                "lowPrice": 244.44,
-                "midPrice": 272.5,
-                "highPrice": 299.99,
-                "marketPrice": 225.56,
-                "directLowPrice": null
+            "normal": {
+                "lowPrice": 0.25,
+                "midPrice": 0.74,
+                "highPrice": 9.95,
+                "marketPrice": 0.74,
+                "directLowPrice": 0.7
             }
         }
     }
