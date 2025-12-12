@@ -13,7 +13,8 @@ import card
 sdk = TCGdex("en")
 
 # CHANGE THIS
-sets: list[str] = [f"xy{n}" for n in range(11, 13)]
+# sets: list[str] = [f"swsh{n}" for n in range(11, 13)]
+sets: list[str] = ["cel25"]
 print(sets)
 
 for set_id in sets:

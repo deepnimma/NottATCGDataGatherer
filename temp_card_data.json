@@ -1,76 +1,85 @@
 {
-    "category": "Trainer",
-    "id": "xy12-113",
-    "illustrator": "Ken Sugimori",
-    "image": "https://assets.tcgdex.net/en/xy/xy12/113",
-    "localId": "113",
-    "name": "Here Comes Team Rocket!",
-    "rarity": "Secret Rare",
+    "category": "Pokemon",
+    "id": "cel25-145A",
+    "illustrator": "Shizurow",
+    "localId": "145A",
+    "name": "Garchomp C LV.X",
+    "rarity": "Classic Collection",
     "set": {
         "cardCount": {
-            "official": 108,
-            "total": 113
+            "official": 25,
+            "total": 51
         },
-        "id": "xy12",
-        "logo": "https://assets.tcgdex.net/en/xy/xy12/logo",
-        "name": "Evolutions",
-        "symbol": "https://assets.tcgdex.net/univ/xy/xy12/symbol"
+        "id": "cel25",
+        "logo": "https://assets.tcgdex.net/en/swsh/cel25/logo",
+        "name": "Celebrations",
+        "symbol": "https://assets.tcgdex.net/univ/swsh/cel25/symbol"
     },
     "variants": {
         "firstEdition": false,
         "holo": true,
-        "normal": true,
-        "reverse": true,
+        "normal": false,
+        "reverse": false,
         "wPromo": false
     },
     "variants_detailed": [
-        {
-            "type": "normal",
-            "size": "standard"
-        },
-        {
-            "type": "reverse",
-            "size": "standard"
-        },
         {
             "type": "holo",
             "size": "standard"
         }
     ],
-    "effect": "Each player turns all of his or her Prize cards face up. (Those Prize cards remain face up for the rest of the game.)",
-    "trainerType": "Supporter",
+    "dexId": [
+        445
+    ],
+    "hp": 110,
+    "types": [
+        "Colorless"
+    ],
+    "stage": "LEVEL-UP",
+    "suffix": "SP",
+    "abilities": [
+        {
+            "type": "Poke-POWER",
+            "name": "Healing Breath",
+            "effect": "Once during your turn (before your attack), when you put Garchomp C LV.X from your hand onto your Active Garchomp C, you may remove all damage counters from each of your Pokemon SP."
+        }
+    ],
+    "attacks": [
+        {
+            "cost": [
+                "Colorless",
+                "Colorless",
+                "Colorless"
+            ],
+            "name": "Dragon Rush",
+            "effect": "Discard 2 Energy attached to Garchomp C. Choose 1 of your opponent's Pokemon. This attack does 80 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.) Garchomp C can't use Dragon Rush during your next turn."
+        }
+    ],
+    "weaknesses": [
+        {
+            "type": "Colorless",
+            "value": "\u00d72"
+        }
+    ],
+    "retreat": 0,
     "legal": {
         "standard": false,
         "expanded": true
     },
-    "updated": "2025-08-16T20:39:55Z",
+    "updated": "2025-08-16T19:38:01Z",
     "pricing": {
-        "cardmarket": {
-            "updated": "2025-11-20T01:50:57.000Z",
-            "unit": "EUR",
-            "avg": 1.47,
-            "low": 0.2,
-            "trend": 1.52,
-            "avg1": 1.37,
-            "avg7": 1.38,
-            "avg30": 1.44,
+        "cardmarket": null,
+        "tcgplayer": null
+    }
+}           "avg7": 0.22,
+            "avg30": 0.16,
             "avg-holo": null,
             "low-holo": null,
-            "trend-holo": 1.5,
-            "avg1-holo": 5,
-            "avg7-holo": 1.42,
-            "avg30-holo": 1.46
+            "trend-holo": 0,
+            "avg1-holo": null,
+            "avg7-holo": null,
+            "avg30-holo": null
         },
-        "tcgplayer": {
-            "updated": "2025-11-19T20:05:32.000Z",
-            "unit": "USD",
-            "normal": {
-                "lowPrice": 0.25,
-                "midPrice": 0.74,
-                "highPrice": 9.95,
-                "marketPrice": 0.74,
-                "directLowPrice": 0.7
-            }
-        }
+        "tcgplayer": null
     }
 }
